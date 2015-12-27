@@ -1,11 +1,13 @@
 package com.example.arisara.mytraffic;
 
 import android.content.Intent;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -44,7 +46,7 @@ public class MyTraffic extends AppCompatActivity {
     private void listViewController() {
 
         //#1
-        int[] intIcon = {R.drawable.traffic_01, R.drawable.traffic_02,
+        final int[] intIcon = {R.drawable.traffic_01, R.drawable.traffic_02,
                 R.drawable.traffic_03, R.drawable.traffic_04, R.drawable.traffic_05,
                 R.drawable.traffic_06, R.drawable.traffic_07, R.drawable.traffic_08,
                 R.drawable.traffic_09, R.drawable.traffic_10, R.drawable.traffic_11,
@@ -53,7 +55,7 @@ public class MyTraffic extends AppCompatActivity {
                 R.drawable.traffic_18, R.drawable.traffic_19, R.drawable.traffic_20};
 
         //#2
-        String[] strTitle = new String[20];
+        final String[] strTitle = new String[20];
         strTitle[0] = "หัวข้อที่ 1";
         strTitle[1] = "หัวข้อที่ 2";
         strTitle[2] = "หัวข้อที่ 3";
@@ -82,6 +84,28 @@ public class MyTraffic extends AppCompatActivity {
         //call MyAdapter
         MyAdapter objMyAdapter = new MyAdapter(MyTraffic.this, strTitle ,strDetail, intIcon);
         TrafficListView.setAdapter(objMyAdapter);
+
+        //active when cilck on listview
+        TrafficListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                //Intent to DetailActivity
+                Intent objIntent = new Intent(MyTraffic.this, DetailActivity.class);
+
+
+                //putExtra
+                objIntent.putExtra("Title", strTitle[i]);
+                objIntent.putExtra("Image", intIcon[i]);
+                objIntent.putExtra("Index", i);
+
+                startActivity(objIntent);
+
+
+            } // event
+        });
+
+
 
 
 
