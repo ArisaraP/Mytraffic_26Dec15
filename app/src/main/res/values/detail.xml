@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="detail_shot">
+
+        <item>หัวข้อย่อยที่ 1</item>
+        <item>หัวข้อย่อยที่ 2</item>
+        <item>หัวข้อย่อยที่ 3</item>
+        <item>หัวข้อย่อยที่ 4</item>
+        <item>หัวข้อย่อยที่ 5</item>
+        <item>หัวข้อย่อยที่ 6</item>
+        <item>หัวข้อย่อยที่ 7</item>
+        <item>หัวข้อย่อยที่ 8</item>
+        <item>หัวข้อย่อยที่ 9</item>
+        <item>หัวข้อย่อยที่ 10</item>
+        <item>หัวข้อย่อยที่ 11</item>
+        <item>หัวข้อย่อยที่ 12</item>
+        <item>หัวข้อย่อยที่ 13</item>
+        <item>หัวข้อย่อยที่ 14</item>
+        <item>หัวข้อย่อยที่ 15</item>
+        <item>หัวข้อย่อยที่ 16</item>
+        <item>หัวข้อย่อยที่ 17</item>
+        <item>หัวข้อย่อยที่ 18</item>
+        <item>หัวข้อย่อยที่ 19</item>
+        <item>หัวข้อย่อยที่ 20</item>
+
+    </string-array>
+
+</resources>
